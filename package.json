@@ -1,0 +1,27 @@
+{
+  "name": "volgistics-api-proxy",
+  "version": "1.0.0",
+  "description": "Lightweight proxy for Volgistics API",
+  "main": "index.js",
+  "repository": "https://github.com/pooh-bear/volgistics-api-proxy",
+  "author": "Gabe Palomares <dev@gabe.pw>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "volgistics-api-client": "^1.0.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently \"tsc --watch\" \"nodemon build/index.js\"",
+    "start::build": "nodemon build/index.js"
+  }
+}

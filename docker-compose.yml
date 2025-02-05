@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  volgistics-api-proxy:
+    container_name: volgistics-api-proxy
+    image: "pooh-bear/volgistics-api-proxy:latest"
+    ports:
+      - "13000:3000"
+    environment:
+      NODE_ENV: production
+      ## Set environment variables here, or in .env file ##
+      # AUTH_EMAIL: [Volgistics user email]
+      # AUTH_PASSWORD: [Volgistics user password]
+      # ORG_ID: [Volgistics organization ID, identifiable in the VicNet URL]
+      # APP_API_KEY: [A secure API key of your choosing]
